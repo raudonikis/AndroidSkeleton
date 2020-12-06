@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("dagger.hilt.android.plugin")
     kotlin("android")
     kotlin("android.extensions")
@@ -11,7 +11,6 @@ android {
     buildToolsVersion("30.0.2")
 
     defaultConfig {
-        applicationId = "com.raudonikis.androidskeleton"
         minSdkVersion(23)
         targetSdkVersion(30)
         versionCode = 1
@@ -25,16 +24,14 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(project(":libraries:network"))
-    // Hilt
+    // Networking
+    api(Dependencies.retrofit)
+    api(Dependencies.moshi)
+    // DI
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)
     implementation (Dependencies.hiltLifecycle)
@@ -45,8 +42,4 @@ dependencies {
     // Support
     implementation(Dependencies.appCompat)
     implementation(Dependencies.constraintLayout)
-    // Testing
-    testImplementation(Dependencies.jUnit)
-    androidTestImplementation(Dependencies.jUnitTest)
-    androidTestImplementation(Dependencies.espresso)
 }

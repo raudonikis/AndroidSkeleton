@@ -1,6 +1,11 @@
 object Versions {
     // AndroidX
     const val constraintLayout = "2.0.4"
+    // DI
+    const val hilt = "2.30.1-alpha"
+    const val hiltAndroidx = "1.0.0-alpha02"
+    // Networking
+    const val retrofit = "2.9.0"
     // Support
     const val appCompat = "1.2.0"
     // Kotlin
@@ -15,6 +20,14 @@ object Versions {
 object Dependencies {
     // AndroidX
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    // DI
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val hiltLifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltAndroidx}"
+    const val hiltAndroidXCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltAndroidx}"
+    // Networking
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     // Kotlin
