@@ -9,8 +9,11 @@ object Versions {
     // Logging
     const val timber = "4.7.1"
 
-    // Networking
+    // Retrofit - networking
     const val retrofit = "2.9.0"
+
+    // Room database
+    const val room = "2.2.5"
 
     // Support
     const val appCompat = "1.2.0"
@@ -42,6 +45,7 @@ object Modules {
     object Libraries {
         const val network = ":libraries:network"
         const val common = ":libraries:common"
+        const val data = ":libraries:data"
     }
 }
 
@@ -59,9 +63,14 @@ object Dependencies {
     //Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
-    // Networking
+    // Retrofit - networking
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+
+    // Room database
+    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    const val roomExtensions = "androidx.room:room-ktx:${Versions.room}"
 
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"

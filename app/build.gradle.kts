@@ -28,6 +28,7 @@ android {
 dependencies {
     implementation(project(Modules.Libraries.common))
     implementation(project(Modules.Libraries.network))
+    implementation(project(Modules.Libraries.data))
     // Hilt
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)
