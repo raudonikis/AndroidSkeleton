@@ -8,9 +8,9 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId = "com.raudonikis.androidskeleton"
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Releases.applicationId
+        versionCode = Releases.versionCode
+        versionName = Releases.versionName
     }
 
     buildTypes {
@@ -23,7 +23,7 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(project(":libraries:network"))
+    implementation(project(Modules.Libraries.network))
     // Hilt
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)

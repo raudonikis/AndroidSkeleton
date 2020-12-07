@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.0.2")
+        classpath("com.android.tools.build:gradle:4.1.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.20")
         // Hilt
         classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}")
@@ -33,12 +33,12 @@ subprojects {
 }
 
 fun com.android.build.gradle.BaseExtension.applyAndroidCommons() {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.2")
+    compileSdkVersion(Versions.compileSdk)
+    buildToolsVersion(Versions.buildTools)
 
     defaultConfig {
-        minSdkVersion(23)
-        targetSdkVersion(30)
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
