@@ -22,6 +22,31 @@ allprojects {
     }
 }
 
+subprojects {
+    afterEvaluate {
+        if (hasProperty("android")) {
+            extensions.configure(com.android.build.gradle.BaseExtension::class.java) {
+                applyAndroidCommons()
+            }
+        }
+    }
+}
+
+fun com.android.build.gradle.BaseExtension.applyAndroidCommons() {
+    compileSdkVersion(30)
+    buildToolsVersion("30.0.2")
+
+    defaultConfig {
+        minSdkVersion(23)
+        targetSdkVersion(30)
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }

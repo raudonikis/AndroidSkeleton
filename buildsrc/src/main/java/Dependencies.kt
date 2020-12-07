@@ -15,6 +15,8 @@ object Versions {
     const val jUnit = "4.13.1"
     const val jUnitTest = "1.1.2"
     const val espresso = "3.3.0"
+    // Sdk
+    const val compile = 30
 }
 
 object Dependencies {
