@@ -6,8 +6,9 @@ plugins {
 }
 
 apply {
-    from("https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle")
+    from("../projectDependencyGraph.gradle")
 }
+
 android {
 
     defaultConfig {
