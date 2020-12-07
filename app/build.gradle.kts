@@ -5,6 +5,9 @@ plugins {
     kotlin("kapt")
 }
 
+apply {
+    from("https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle")
+}
 android {
 
     defaultConfig {
@@ -22,21 +25,11 @@ android {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(Modules.Libraries.common))
     implementation(project(Modules.Libraries.network))
     // Hilt
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)
     implementation (Dependencies.hiltLifecycle)
-    kapt(Dependencies.hiltAndroidXCompiler)
-    // Kotlin
-    implementation(Dependencies.kotlinStdLib)
-    implementation(Dependencies.ktxCore)
-    // Support
-    implementation(Dependencies.appCompat)
-    implementation(Dependencies.constraintLayout)
-    // Testing
-    testImplementation(Dependencies.jUnit)
-    androidTestImplementation(Dependencies.jUnitTest)
-    androidTestImplementation(Dependencies.espresso)
+    kapt(Dependencies.hiltLifecycleCompiler)
 }

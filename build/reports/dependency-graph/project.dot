@@ -1,0 +1,22 @@
+digraph {
+  graph [label="Android Skeleton\n ",labelloc=t,fontsize=30,ranksep=1.4];
+  node [style=filled, fillcolor="#bbbbbb"];
+  rankdir=TB;
+
+  # Projects
+
+  ":app" [fillcolor="#baffc9"];
+  ":libraries:common" [fillcolor="#baffc9"];
+  ":libraries:network" [fillcolor="#baffc9"];
+
+  {rank = same;}
+
+  # Dependencies
+
+  ":app" -> ":app"
+  ":app" -> ":libraries:common" [style=dotted]
+  ":app" -> ":libraries:network" [style=dotted]
+  ":libraries:common" -> ":libraries:common"
+  ":libraries:network" -> ":libraries:network"
+  ":libraries:network" -> ":libraries:common" [style=dotted]
+}

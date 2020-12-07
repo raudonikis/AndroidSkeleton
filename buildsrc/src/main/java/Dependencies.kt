@@ -37,6 +37,7 @@ object Releases {
 object Modules {
     object Libraries {
         const val network = ":libraries:network"
+        const val common = ":libraries:common"
     }
 }
 
@@ -49,7 +50,7 @@ object Dependencies {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
     const val hiltLifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltAndroidx}"
-    const val hiltAndroidXCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltAndroidx}"
+    const val hiltLifecycleCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltAndroidx}"
 
     // Networking
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
