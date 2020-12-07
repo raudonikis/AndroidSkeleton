@@ -6,6 +6,9 @@ object Versions {
     const val hilt = "2.30.1-alpha"
     const val hiltAndroidx = "1.0.0-alpha02"
 
+    // Logging
+    const val timber = "4.7.1"
+
     // Networking
     const val retrofit = "2.9.0"
 
@@ -15,6 +18,7 @@ object Versions {
     // Kotlin
     const val ktxCore = "1.3.2"
     const val kotlin = "1.4.20"
+    const val coroutines = "1.4.2"
 
     // Testing
     const val jUnit = "4.13.1"
@@ -52,6 +56,9 @@ object Dependencies {
     const val hiltLifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltAndroidx}"
     const val hiltLifecycleCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltAndroidx}"
 
+    //Logging
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+
     // Networking
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
@@ -62,6 +69,7 @@ object Dependencies {
     // Kotlin
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    const val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
     // Testing
     const val jUnit = "junit:junit:${Versions.jUnit}"

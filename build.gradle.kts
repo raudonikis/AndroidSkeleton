@@ -1,4 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import com.android.build.gradle.BaseExtension
+
 buildscript {
     val kotlin_version by extra("1.4.20")
     repositories {
@@ -23,16 +26,21 @@ allprojects {
 }
 
 subprojects {
+    tasks.withType<KotlinCompile>() {
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_1_8.toString()
+        }
+    }
     afterEvaluate {
         if (hasProperty("android")) {
-            extensions.configure(com.android.build.gradle.BaseExtension::class.java) {
+            extensions.configure(BaseExtension::class.java) {
                 applyAndroidCommons()
             }
         }
     }
 }
 
-fun com.android.build.gradle.BaseExtension.applyAndroidCommons() {
+fun BaseExtension.applyAndroidCommons() {
     compileSdkVersion(Versions.compileSdk)
     buildToolsVersion(Versions.buildTools)
 
