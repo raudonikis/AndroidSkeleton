@@ -4,7 +4,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject
 
-class ExampleApiInterceptor @Inject constructor() : Interceptor {
+internal class ExampleApiInterceptor @Inject constructor() : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         with(chain.request()) {

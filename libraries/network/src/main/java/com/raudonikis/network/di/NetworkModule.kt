@@ -31,14 +31,14 @@ object NetworkModule {
     }
 
     @Provides
-    fun provideOkHttpClient(interceptor: ExampleApiInterceptor): OkHttpClient {
+    internal fun provideOkHttpClient(interceptor: ExampleApiInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(interceptor)
             .build()
     }
 
     @Provides
-    fun provideMoshiConverterFactory(): MoshiConverterFactory {
+    internal fun provideMoshiConverterFactory(): MoshiConverterFactory {
         return MoshiConverterFactory.create()
     }
 }
