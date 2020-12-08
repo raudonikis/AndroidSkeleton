@@ -27,8 +27,6 @@ android {
 
 dependencies {
     implementation(project(Modules.Libraries.common))
-    implementation(project(Modules.Libraries.network))
-    implementation(project(Modules.Libraries.data))
     implementation(project(Modules.Libraries.navigation))
     implementation(project(Modules.Features.home))
     implementation(project(Modules.Features.dashboard))
