@@ -31,6 +31,7 @@ dependencies {
     implementation(project(Modules.Libraries.data))
     implementation(project(Modules.Libraries.navigation))
     implementation(project(Modules.Features.home))
+    implementation(project(Modules.Features.dashboard))
     // Hilt
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)

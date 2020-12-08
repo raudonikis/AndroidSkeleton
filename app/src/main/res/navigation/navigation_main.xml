@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/navigation_home">
+
+    <include
+        android:id="@id/navigation_home"
+        app:graph="@navigation/navigation_home" />
+
+    <include
+        android:id="@id/navigation_dashboard"
+        app:graph="@navigation/navigation_dashboard" />
+    <action
+        android:id="@+id/action_global_navigation_home"
+        app:destination="@id/navigation_home" />
+    <action
+        android:id="@+id/action_global_navigation_dashboard"
+        app:destination="@id/navigation_dashboard" />
+</navigation>

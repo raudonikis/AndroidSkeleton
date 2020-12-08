@@ -1,21 +1,21 @@
 package com.raudonikis.navigation
 
 import androidx.navigation.NavDirections
-import dagger.hilt.android.scopes.ActivityRetainedScoped
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@ActivityRetainedScoped
-class NavigationHandler @Inject constructor() {
+@Singleton
+class NavigationDispatcher @Inject constructor() {
     private val coroutineScope = CoroutineScope(Job() + Dispatchers.IO)
-    private val navigationCommands = MutableSharedFlow<NavigationCommand>(replay = 0)
+    private val navigationCommands = MutableSharedFlow<NavigationCommand>()
 
-    fun getNavigationCommands(): Flow<NavigationCommand> = navigationCommands
+    fun getNavigationCommands(): SharedFlow<NavigationCommand> = navigationCommands
 
     fun navigate(destination: NavDirections) {
         coroutineScope.launch {
@@ -23,11 +23,13 @@ class NavigationHandler @Inject constructor() {
         }
     }
 
-    fun navigateToGraph(graph: NavigationGraph) {
+    fun navigate(graph: NavigationGraph) {
         coroutineScope.launch {
             navigationCommands.emit(NavigationCommand.ToGraph(graph))
         }
     }
+
+    // TODO : fun navigate(uri: Uri) {}
 
     fun navigateBack() {
         coroutineScope.launch {
