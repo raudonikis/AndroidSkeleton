@@ -7,8 +7,8 @@ plugins {
 dependencies {
     implementation(project(Modules.Libraries.common))
     // Navigation
-    implementation(Dependencies.navigationFragment)
-    implementation(Dependencies.navigationUi)
+    api(Dependencies.navigationFragment)
+    api(Dependencies.navigationUi)
     // Hilt
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)

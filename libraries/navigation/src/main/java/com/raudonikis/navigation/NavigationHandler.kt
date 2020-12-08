@@ -23,6 +23,12 @@ class NavigationHandler @Inject constructor() {
         }
     }
 
+    fun navigateToGraph(graph: NavigationGraph) {
+        coroutineScope.launch {
+            navigationCommands.emit(NavigationCommand.ToGraph(graph))
+        }
+    }
+
     fun navigateBack() {
         coroutineScope.launch {
             navigationCommands.emit(NavigationCommand.Back)

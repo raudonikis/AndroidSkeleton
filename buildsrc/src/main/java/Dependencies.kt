@@ -49,6 +49,11 @@ object Modules {
         const val network = ":libraries:network"
         const val common = ":libraries:common"
         const val data = ":libraries:data"
+        const val navigation = ":libraries:navigation"
+    }
+    object Features {
+        const val home = ":features:home"
+        const val dashboard = ":features:dashboard"
     }
 }
 

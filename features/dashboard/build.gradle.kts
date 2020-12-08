@@ -5,4 +5,5 @@ plugins {
 
 dependencies {
     implementation(project(Modules.Libraries.common))
+    implementation(project(Modules.Libraries.navigation))
 }

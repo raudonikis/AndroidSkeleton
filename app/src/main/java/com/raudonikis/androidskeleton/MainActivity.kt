@@ -1,23 +1,30 @@
 package com.raudonikis.androidskeleton
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.raudonikis.data.daos.ExampleDao
-import com.raudonikis.network.ExampleApi
+import com.raudonikis.navigation.NavigationHandler
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     @Inject
-    lateinit var api: ExampleApi
+    lateinit var navigationHandler: NavigationHandler
 
-    @Inject
-    lateinit var exampleDao: ExampleDao
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+    /*private fun setUpNavigation() {
+        lifecycleScope.launchWhenCreated {
+            navigationHandler.getNavigationCommands()
+                .onEach { navigationCommand ->
+                    when (navigationCommand) {
+                        is NavigationCommand.ToGraph -> {
+                            val destination = when (navigationCommand.graph) {
+                                NavigationGraph.Home -> R.id.action_global_navigation_home
+                                NavigationGraph.Dashboard -> R.id.action_global_navigation_dashboard
+                            }
+                            findNavController(R.id.nav_host_fragment).navigate(destination)
+                        }
+                    }
+                }.collect()
+        }
+    }*/
 }
