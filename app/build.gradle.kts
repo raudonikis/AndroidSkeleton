@@ -34,4 +34,8 @@ dependencies {
     kapt(Dependencies.hiltCompiler)
     implementation (Dependencies.hiltLifecycle)
     kapt(Dependencies.hiltLifecycleCompiler)
+    // Testing
+    testImplementation(Dependencies.jUnit)
+    androidTestImplementation(Dependencies.jUnitTest)
+    androidTestImplementation(Dependencies.espresso)
 }

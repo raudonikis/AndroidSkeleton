@@ -14,8 +14,4 @@ dependencies {
     api(Dependencies.constraintLayout)
     // Logging
     api(Dependencies.timber)
-    // Testing
-    testApi(Dependencies.jUnit)
-    androidTestApi(Dependencies.jUnitTest)
-    androidTestApi(Dependencies.espresso)
 }
