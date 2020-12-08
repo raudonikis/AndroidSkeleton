@@ -15,6 +15,9 @@ object Versions {
     // Room database
     const val room = "2.2.5"
 
+    // Navigation
+    const val navigation = "2.3.1"
+
     // Support
     const val appCompat = "1.2.0"
 
@@ -71,6 +74,10 @@ object Dependencies {
     const val room = "androidx.room:room-runtime:${Versions.room}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
     const val roomExtensions = "androidx.room:room-ktx:${Versions.room}"
+
+    // Navigation
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
