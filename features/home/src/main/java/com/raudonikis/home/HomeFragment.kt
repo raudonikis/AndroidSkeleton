@@ -3,19 +3,16 @@ package com.raudonikis.home
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.raudonikis.home.databinding.FragmentHomeBinding
-import com.raudonikis.navigation.NavigationDispatcher
-import com.raudonikis.navigation.NavigationGraph
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
 
-    @Inject
-    lateinit var navigationDispatcher: NavigationDispatcher
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -24,11 +21,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun setUpListeners() {
-        binding.buttonToDashboard.setOnClickListener {
-            navigationDispatcher.navigate(NavigationGraph.Dashboard)
-        }
-        binding.buttonToHomeNext.setOnClickListener {
-            navigationDispatcher.navigate(HomeRouter.homeToHomeNext())
+        binding.apply {
+            buttonToDashboard.setOnClickListener {
+                viewModel.navigateToDashboard()
+            }
+            buttonToHomeNext.setOnClickListener {
+                viewModel.navigateToHomeNext()
+            }
         }
     }
 }
