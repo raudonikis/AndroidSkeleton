@@ -1,6 +1,7 @@
 object Versions {
     // AndroidX
     const val constraintLayout = "2.0.4"
+    const val recyclerView = "1.0.0"
 
     // DI
     const val hilt = "2.30.1-alpha"
@@ -62,6 +63,7 @@ object Dependencies {
     // AndroidX
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
 
     // DI
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
