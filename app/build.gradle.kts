@@ -39,4 +39,6 @@ dependencies {
     testImplementation(Dependencies.jUnit)
     androidTestImplementation(Dependencies.jUnitTest)
     androidTestImplementation(Dependencies.espresso)
+    // Quality
+    debugImplementation(Dependencies.leakCanary)
 }

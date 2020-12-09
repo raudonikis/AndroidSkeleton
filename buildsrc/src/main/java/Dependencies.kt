@@ -37,6 +37,9 @@ object Versions {
     const val minSdk = 23
     const val targetSdk = 30
     const val buildTools = "30.0.2"
+
+    // Quality
+    const val leakCanary = "2.5"
 }
 
 object Releases {
@@ -99,4 +102,7 @@ object Dependencies {
     const val jUnit = "junit:junit:${Versions.jUnit}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTest}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+
+    // Quality
+    const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
 }
