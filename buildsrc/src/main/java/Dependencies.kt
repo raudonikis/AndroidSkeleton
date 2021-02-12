@@ -4,8 +4,8 @@ object Versions {
     const val recyclerView = "1.0.0"
 
     // DI
-    const val hilt = "2.30.1-alpha"
-    const val hiltAndroidx = "1.0.0-alpha02"
+    const val hilt = "2.32-alpha"
+    const val hiltAndroidx = "1.0.0-alpha03"
 
     // Logging
     const val timber = "4.7.1"
@@ -39,7 +39,7 @@ object Versions {
     const val buildTools = "30.0.2"
 
     // Quality
-    const val leakCanary = "2.5"
+    const val leakCanary = "2.6"
 }
 
 object Releases {
