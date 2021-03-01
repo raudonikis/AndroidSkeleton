@@ -1,13 +1,14 @@
 package com.raudonikis.home
 
-import androidx.hilt.Assisted
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.raudonikis.navigation.NavigationDispatcher
 import com.raudonikis.navigation.NavigationGraph
+import dagger.assisted.Assisted
+import dagger.hilt.android.lifecycle.HiltViewModel
 
-class HomeViewModel @ViewModelInject constructor(
+@HiltViewModel
+class HomeViewModel constructor(
     private val navigationDispatcher: NavigationDispatcher,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {

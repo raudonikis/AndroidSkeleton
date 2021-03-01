@@ -39,7 +39,7 @@ object Versions {
     const val buildTools = "30.0.2"
 
     // Quality
-    const val leakCanary = "2.5"
+    const val leakCanary = "2.6"
 }
 
 object Releases {
