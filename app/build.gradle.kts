@@ -11,7 +11,6 @@ apply {
 }
 
 android {
-
     defaultConfig {
         applicationId = Releases.applicationId
         versionCode = Releases.versionCode
@@ -24,6 +23,13 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+    hilt {
+        enableExperimentalClasspathAggregation = true
+    }
+    lintOptions {
+        isCheckReleaseBuilds = false
+    }
+
 }
 
 dependencies {
