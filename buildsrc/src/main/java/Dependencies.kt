@@ -4,7 +4,7 @@ object Versions {
     const val recyclerView = "1.0.0"
 
     // DI
-    const val hilt = "2.33-beta"
+    const val dagger = "2.35.1"
     const val hiltAndroidx = "1.0.0-alpha03"
 
     // Logging
@@ -69,10 +69,9 @@ object Dependencies {
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
 
     // DI
-    const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
-    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
-    const val hiltLifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltAndroidx}"
-    const val hiltLifecycleCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltAndroidx}"
+    const val daggerHilt = "com.google.dagger:hilt-android:${Versions.dagger}"
+    const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.dagger}"
+    const val daggerHiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
 
     //Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"

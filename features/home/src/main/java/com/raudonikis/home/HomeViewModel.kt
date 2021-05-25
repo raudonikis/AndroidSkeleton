@@ -4,13 +4,13 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.raudonikis.navigation.NavigationDispatcher
 import com.raudonikis.navigation.NavigationGraph
-import dagger.assisted.Assisted
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel constructor(
+class HomeViewModel @Inject constructor(
     private val navigationDispatcher: NavigationDispatcher,
-    @Assisted private val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     fun navigateToDashboard() {

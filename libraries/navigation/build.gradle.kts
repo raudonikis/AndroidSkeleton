@@ -10,6 +10,6 @@ dependencies {
     api(Dependencies.navigationFragment)
     api(Dependencies.navigationUi)
     // Hilt
-    implementation(Dependencies.hilt)
-    kapt(Dependencies.hiltCompiler)
+    implementation(Dependencies.daggerHilt)
+    kapt(Dependencies.daggerCompiler)
 }

@@ -15,8 +15,6 @@ dependencies {
     implementation(project(Modules.Libraries.navigation))
     implementation(project(Modules.Libraries.dataDomain))
     // Hilt
-    implementation(Dependencies.hilt)
-    implementation(Dependencies.hiltLifecycle)
-    kapt(Dependencies.hiltCompiler)
-    kapt(Dependencies.hiltLifecycleCompiler)
+    implementation(Dependencies.daggerHilt)
+    kapt(Dependencies.daggerCompiler)
 }

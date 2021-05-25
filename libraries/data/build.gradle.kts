@@ -8,8 +8,8 @@ plugins {
 dependencies {
     implementation(project(Modules.Libraries.common))
     // DI
-    implementation(Dependencies.hilt)
-    kapt(Dependencies.hiltCompiler)
+    implementation(Dependencies.daggerHilt)
+    kapt(Dependencies.daggerCompiler)
     // Room database
     api(Dependencies.room)
     api(Dependencies.roomExtensions)

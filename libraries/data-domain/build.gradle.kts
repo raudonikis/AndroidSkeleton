@@ -10,6 +10,6 @@ dependencies {
     implementation(project(Modules.Libraries.data))
     implementation(project(Modules.Libraries.network))
     // DI
-    implementation(Dependencies.hilt)
-    kapt(Dependencies.hiltCompiler)
+    implementation(Dependencies.daggerHilt)
+    kapt(Dependencies.daggerCompiler)
 }

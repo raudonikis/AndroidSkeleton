@@ -32,10 +32,8 @@ dependencies {
     implementation(project(Modules.Features.home))
     implementation(project(Modules.Features.dashboard))
     // Hilt
-    implementation(Dependencies.hilt)
-    kapt(Dependencies.hiltCompiler)
-    implementation (Dependencies.hiltLifecycle)
-    kapt(Dependencies.hiltLifecycleCompiler)
+    implementation(Dependencies.daggerHilt)
+    kapt(Dependencies.daggerCompiler)
     // Testing
     testImplementation(Dependencies.jUnit)
     androidTestImplementation(Dependencies.jUnitTest)

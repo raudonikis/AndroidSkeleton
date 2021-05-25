@@ -3,16 +3,15 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import com.android.build.gradle.BaseExtension
 
 buildscript {
-    val kotlin_version by extra("1.4.20")
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.20")
+        classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32")
         // Hilt
-        classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}")
+        classpath(Dependencies.daggerHiltPlugin)
         // Navigation
         classpath("android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0")
         // NOTE: Do not place your application dependencies here; they belong
