@@ -10,8 +10,10 @@ object Versions {
     // Logging
     const val timber = "4.7.1"
 
-    // Retrofit - networking
+    // Networking
     const val retrofit = "2.9.0"
+    const val moshi = "1.11.0"
+    const val okHttp = "4.9.0"
 
     // Room database
     const val room = "2.2.5"
@@ -76,9 +78,12 @@ object Dependencies {
     //Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
-    // Retrofit - networking
+    // Networking
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
+    const val okHttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
 
     // Room database
     const val room = "androidx.room:room-runtime:${Versions.room}"

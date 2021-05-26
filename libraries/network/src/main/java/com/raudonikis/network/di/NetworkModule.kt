@@ -8,6 +8,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -18,7 +19,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideMovieApiService(
+    fun provideExampleApiService(
         okHttpClient: OkHttpClient,
         moshiConverterFactory: MoshiConverterFactory
     ): ExampleApi {
@@ -31,14 +32,18 @@ object NetworkModule {
     }
 
     @Provides
-    internal fun provideOkHttpClient(interceptor: ExampleApiInterceptor): OkHttpClient {
+    internal fun provideOkHttpClient(
+        apiInterceptor: ExampleApiInterceptor,
+        httpLoggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(interceptor)
+            .addInterceptor(apiInterceptor)
+            .addInterceptor(httpLoggingInterceptor)
             .build()
     }
 
     @Provides
-    internal fun provideMoshiConverterFactory(): MoshiConverterFactory {
-        return MoshiConverterFactory.create()
+    internal fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     }
 }

@@ -9,7 +9,10 @@ dependencies {
     implementation(project(Modules.Libraries.common))
     // Networking
     api(Dependencies.retrofit)
-    api(Dependencies.moshi)
+    implementation(Dependencies.moshi)
+    implementation(Dependencies.moshiConverter)
+    implementation(Dependencies.moshiAdapters)
+    implementation(Dependencies.okHttpInterceptor)
     // DI
     implementation(Dependencies.daggerHilt)
     kapt(Dependencies.daggerCompiler)
