@@ -1,23 +1,22 @@
 object Versions {
     // AndroidX
     const val constraintLayout = "2.0.4"
-    const val recyclerView = "1.0.0"
+    const val recyclerView = "1.2.0"
 
     // DI
     const val dagger = "2.36"
-    const val hiltAndroidx = "1.0.0-alpha03"
 
     // Logging
     const val timber = "4.7.1"
 
     // Networking
     const val retrofit = "2.9.0"
-    const val moshi = "1.11.0"
+    const val moshi = "1.12.0"
     const val okHttp = "4.9.0"
     const val networkResponseAdapter = "4.2.1"
 
     // Room database
-    const val room = "2.2.5"
+    const val room = "2.3.0"
 
     // Navigation
     const val navigation = "2.3.5"
@@ -26,9 +25,9 @@ object Versions {
     const val appCompat = "1.2.0"
 
     // Kotlin
-    const val ktxCore = "1.3.2"
+    const val ktxCore = "1.5.0"
     const val kotlin = "1.4.20"
-    const val coroutines = "1.4.2"
+    const val coroutines = "1.5.0"
     const val kotlinGradlePlugin = "1.5.10"
 
     // Testing
