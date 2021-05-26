@@ -1,5 +1,6 @@
 package com.raudonikis.data_domain.repo
 
+import com.haroldadmin.cnradapter.NetworkResponse
 import com.raudonikis.data.daos.ExampleDao
 import com.raudonikis.data_domain.mappers.ExampleModelMapper
 import com.raudonikis.data_domain.models.ExampleModel
@@ -18,6 +19,16 @@ class ExampleRepository @Inject constructor(
     }
 
     suspend fun fetchNewExample(): ExampleModel {
-        return ExampleModelMapper.fromExampleResponse(exampleApi.example(name = "name"))
+        exampleApi.example("name").apply {
+            return when (this) {
+                is NetworkResponse.Success -> {
+                    ExampleModelMapper.fromExampleResponse(this.body)
+                }
+                else -> {
+                    //error
+                    ExampleModel()
+                }
+            }
+        }
     }
 }

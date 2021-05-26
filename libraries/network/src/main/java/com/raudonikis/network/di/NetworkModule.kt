@@ -1,5 +1,6 @@
 package com.raudonikis.network.di
 
+import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory
 import com.raudonikis.network.EXAMPLE_API_BASE_URL
 import com.raudonikis.network.ExampleApi
 import com.raudonikis.network.ExampleApiInterceptor
@@ -26,6 +27,7 @@ object NetworkModule {
         return Retrofit.Builder()
             .baseUrl(EXAMPLE_API_BASE_URL)
             .client(okHttpClient)
+            .addCallAdapterFactory(NetworkResponseAdapterFactory())
             .addConverterFactory(moshiConverterFactory)
             .build()
             .create(ExampleApi::class.java)

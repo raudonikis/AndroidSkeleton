@@ -14,6 +14,7 @@ object Versions {
     const val retrofit = "2.9.0"
     const val moshi = "1.11.0"
     const val okHttp = "4.9.0"
+    const val networkResponseAdapter = "4.2.1"
 
     // Room database
     const val room = "2.2.5"
@@ -58,6 +59,7 @@ object Modules {
         const val dataDomain = ":libraries:data-domain"
         const val navigation = ":libraries:navigation"
     }
+
     object Features {
         const val home = ":features:home"
         const val dashboard = ":features:dashboard"
@@ -84,6 +86,8 @@ object Dependencies {
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
     const val okHttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
+    const val networkResponseAdapter =
+        "com.github.haroldadmin:NetworkResponseAdapter:${Versions.networkResponseAdapter}"
 
     // Room database
     const val room = "androidx.room:room-runtime:${Versions.room}"
@@ -91,7 +95,8 @@ object Dependencies {
     const val roomExtensions = "androidx.room:room-ktx:${Versions.room}"
 
     // Navigation
-    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // Support
@@ -100,7 +105,8 @@ object Dependencies {
     // Kotlin
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
-    const val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val kotlinCoroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
     // Testing
     const val jUnit = "junit:junit:${Versions.jUnit}"

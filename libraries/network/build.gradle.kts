@@ -13,6 +13,7 @@ dependencies {
     implementation(Dependencies.moshiConverter)
     implementation(Dependencies.moshiAdapters)
     implementation(Dependencies.okHttpInterceptor)
+    api(Dependencies.networkResponseAdapter)
     // DI
     implementation(Dependencies.daggerHilt)
     kapt(Dependencies.daggerCompiler)
