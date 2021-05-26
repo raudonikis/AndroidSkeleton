@@ -2,6 +2,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import com.android.build.gradle.BaseExtension
 
+plugins {
+    id("com.github.ben-manes.versions") version "0.38.0"
+}
+
 buildscript {
     repositories {
         google()
