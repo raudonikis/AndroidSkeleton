@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
-    private lateinit var binding: FragmentHomeBinding
+    private var binding: FragmentHomeBinding? = null
 
     private val viewModel: HomeViewModel by viewModels()
 
@@ -21,7 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun setUpListeners() {
-        binding.apply {
+        binding?.apply {
             buttonToDashboard.setOnClickListener {
                 viewModel.navigateToDashboard()
             }
@@ -29,5 +29,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 viewModel.navigateToHomeNext()
             }
         }
+    }
+
+    override fun onDestroy() {
+        binding = null
+        super.onDestroy()
     }
 }

@@ -4,7 +4,7 @@ object Versions {
     const val recyclerView = "1.0.0"
 
     // DI
-    const val dagger = "2.35.1"
+    const val dagger = "2.36"
     const val hiltAndroidx = "1.0.0-alpha03"
 
     // Logging
@@ -20,7 +20,7 @@ object Versions {
     const val room = "2.2.5"
 
     // Navigation
-    const val navigation = "2.3.1"
+    const val navigation = "2.3.5"
 
     // Support
     const val appCompat = "1.2.0"
@@ -29,9 +29,10 @@ object Versions {
     const val ktxCore = "1.3.2"
     const val kotlin = "1.4.20"
     const val coroutines = "1.4.2"
+    const val kotlinGradlePlugin = "1.5.10"
 
     // Testing
-    const val jUnit = "4.13.1"
+    const val jUnit = "4.13.2"
     const val jUnitTest = "1.1.2"
     const val espresso = "3.3.0"
 
@@ -42,7 +43,7 @@ object Versions {
     const val buildTools = "30.0.2"
 
     // Quality
-    const val leakCanary = "2.6"
+    const val leakCanary = "2.7"
 }
 
 object Releases {
@@ -98,6 +99,8 @@ object Dependencies {
     const val navigationFragment =
         "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val navigationSafeArgsPlugin =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
@@ -107,6 +110,8 @@ object Dependencies {
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
     const val kotlinCoroutines =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val kotlinGradlePlugin =
+        "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}"
 
     // Testing
     const val jUnit = "junit:junit:${Versions.jUnit}"
