@@ -24,7 +24,9 @@ An android template for creating a new project with most set up already done.
 For more information about used dependencies, see [this](/buildSrc/src/main/java/Dependencies.kt) file.
 
 ## Project structure
-![project_structure]((https://ibb.co/X8DkZQD)
+
+![project structure]((https://ibb.co/X8DkZQD)
+
 - app - main app module
 - buildSrc - special module for managing dependencies
 - features - package for feature modules
