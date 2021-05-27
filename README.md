@@ -25,7 +25,7 @@ For more information about used dependencies, see [this](/buildSrc/src/main/java
 
 ## Project structure
 
-![project structure]((https://ibb.co/X8DkZQD)
+![project structure](https://ibb.co/X8DkZQD)
 
 - app - main app module
 - buildSrc - special module for managing dependencies
