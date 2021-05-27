@@ -1,5 +1,5 @@
 # AndroidSkeleton
-
+<br />
 ![Min API](https://img.shields.io/badge/API-23%2B-orange.svg?style=flat)
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](http://developer.android.com/index.html)
 An android template for creating a new project with most set up already done.
@@ -24,7 +24,7 @@ An android template for creating a new project with most set up already done.
 For more information about used dependencies, see [this](/buildSrc/src/main/java/Dependencies.kt) file.
 
 ## Project structure
-[](https://ibb.co/X8DkZQD)
+![project_structure]((https://ibb.co/X8DkZQD)
 - app - main app module
 - buildSrc - special module for managing dependencies
 - features - package for feature modules
