@@ -8,6 +8,7 @@ plugins {
 
 android {
     buildFeatures.viewBinding = true
+    namespace = "com.raudonikis.home"
 }
 
 dependencies {

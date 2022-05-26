@@ -19,16 +19,16 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
-    hilt {
-        enableExperimentalClasspathAggregation = true
+    lint {
+        checkReleaseBuilds = false
     }
-    lintOptions {
-        isCheckReleaseBuilds = false
-    }
-
+    namespace = "com.raudonikis.androidskeleton"
 }
 
 dependencies {

@@ -4,7 +4,7 @@ object Versions {
     const val recyclerView = "1.2.0"
 
     // DI
-    const val dagger = "2.36"
+    const val dagger = "2.42"
 
     // Logging
     const val timber = "4.7.1"
@@ -16,10 +16,10 @@ object Versions {
     const val networkResponseAdapter = "4.2.1"
 
     // Room database
-    const val room = "2.3.0"
+    const val room = "2.4.2"
 
     // Navigation
-    const val navigation = "2.3.5"
+    const val navigation = "2.4.2"
 
     // Support
     const val appCompat = "1.2.0"
@@ -36,9 +36,9 @@ object Versions {
     const val espresso = "3.3.0"
 
     // Sdk
-    const val compileSdk = 30
+    const val compileSdk = 32
     const val minSdk = 23
-    const val targetSdk = 30
+    const val targetSdk = 32
     const val buildTools = "30.0.2"
 
     // Quality
@@ -77,7 +77,7 @@ object Dependencies {
     const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.dagger}"
     const val daggerHiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
 
-    //Logging
+    // Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
     // Networking
