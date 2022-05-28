@@ -5,30 +5,26 @@ plugins {
     kotlin("kapt")
 }
 
-apply {
-    from("../projectDependencyGraph.gradle")
-}
-
 android {
     defaultConfig {
-        applicationId = Releases.applicationId
-        versionCode = Releases.versionCode
-        versionName = Releases.versionName
+        applicationId = AndroidConfig.applicationId
+        versionCode = AndroidConfig.versionCode
+        versionName = AndroidConfig.versionName
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
-    hilt {
-        enableExperimentalClasspathAggregation = true
+    lint {
+        checkReleaseBuilds = false
     }
-    lintOptions {
-        isCheckReleaseBuilds = false
-    }
-
+    namespace = "com.raudonikis.androidskeleton"
 }
 
 dependencies {

@@ -15,3 +15,6 @@ dependencies {
     api(Dependencies.roomExtensions)
     kapt(Dependencies.roomCompiler)
 }
+android {
+    namespace = "com.raudonikis.data"
+}

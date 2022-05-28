@@ -1,69 +1,45 @@
 object Versions {
     // AndroidX
-    const val constraintLayout = "2.0.4"
-    const val recyclerView = "1.2.0"
+    const val constraintLayout = "2.1.4"
+    const val recyclerView = "1.2.1"
 
     // DI
-    const val dagger = "2.36"
+    const val dagger = "2.42"
 
     // Logging
-    const val timber = "4.7.1"
+    const val timber = "5.0.1"
 
     // Networking
     const val retrofit = "2.9.0"
-    const val moshi = "1.12.0"
+    const val moshi = "1.13.0"
     const val okHttp = "4.9.0"
-    const val networkResponseAdapter = "4.2.1"
+    const val networkResponseAdapter = "5.0.0"
 
     // Room database
-    const val room = "2.3.0"
+    const val room = "2.4.2"
 
     // Navigation
-    const val navigation = "2.3.5"
+    const val navigation = "2.4.2"
 
     // Support
-    const val appCompat = "1.2.0"
+    const val appCompat = "1.4.1"
+
+    // UI
+    const val fastAdapter = "5.6.0"
 
     // Kotlin
-    const val ktxCore = "1.5.0"
-    const val kotlin = "1.4.20"
-    const val coroutines = "1.5.0"
-    const val kotlinGradlePlugin = "1.5.10"
+    const val ktxCore = "1.7.0"
+    const val kotlin = "1.6.21"
+    const val coroutines = "1.6.1"
+    const val kotlinGradlePlugin = "1.6.21"
 
     // Testing
     const val jUnit = "4.13.2"
-    const val jUnitTest = "1.1.2"
-    const val espresso = "3.3.0"
-
-    // Sdk
-    const val compileSdk = 30
-    const val minSdk = 23
-    const val targetSdk = 30
-    const val buildTools = "30.0.2"
+    const val jUnitTest = "1.1.3"
+    const val espresso = "3.4.0"
 
     // Quality
-    const val leakCanary = "2.7"
-}
-
-object Releases {
-    const val applicationId = "com.raudonikis.androidskeleton"
-    const val versionCode = 1
-    const val versionName = "1.0"
-}
-
-object Modules {
-    object Libraries {
-        const val network = ":libraries:network"
-        const val common = ":libraries:common"
-        const val data = ":libraries:data"
-        const val dataDomain = ":libraries:data-domain"
-        const val navigation = ":libraries:navigation"
-    }
-
-    object Features {
-        const val home = ":features:home"
-        const val dashboard = ":features:dashboard"
-    }
+    const val leakCanary = "2.9.1"
 }
 
 object Dependencies {
@@ -77,7 +53,7 @@ object Dependencies {
     const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.dagger}"
     const val daggerHiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
 
-    //Logging
+    // Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
     // Networking
@@ -103,6 +79,9 @@ object Dependencies {
 
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+
+    // UI
+    const val fastAdapter = "com.mikepenz:fastadapter:${Versions.fastAdapter}"
 
     // Kotlin
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"

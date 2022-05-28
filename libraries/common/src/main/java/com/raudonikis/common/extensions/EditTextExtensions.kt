@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.callbackFlow
 
 fun EditText?.asFlow() = callbackFlow {
     this@asFlow?.doOnTextChanged { text, _, _, _ ->
-        offer(text.toString())
+        trySend(text.toString())
     }
     awaitClose()
 }

@@ -1,9 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import com.android.build.gradle.BaseExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.38.0"
+    id("com.github.ben-manes.versions") version "0.42.0"
 }
 
 buildscript {
@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("com.android.tools.build:gradle:7.2.0")
         classpath(Dependencies.kotlinGradlePlugin)
         // Hilt
         classpath(Dependencies.daggerHiltPlugin)
@@ -30,7 +30,7 @@ allprojects {
 }
 
 subprojects {
-    tasks.withType<KotlinCompile>() {
+    tasks.withType<KotlinCompile> {
         kotlinOptions {
             jvmTarget = JavaVersion.VERSION_1_8.toString()
         }
@@ -45,13 +45,12 @@ subprojects {
 }
 
 fun BaseExtension.applyAndroidCommons() {
-    compileSdkVersion(Versions.compileSdk)
-    buildToolsVersion(Versions.buildTools)
+    compileSdkVersion(AndroidConfig.compileSdk)
 
     defaultConfig {
-        minSdkVersion(Versions.minSdk)
-        targetSdkVersion(Versions.targetSdk)
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = AndroidConfig.minSdk
+        targetSdk = AndroidConfig.targetSdk
+        testInstrumentationRunner = AndroidConfig.testRunner
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

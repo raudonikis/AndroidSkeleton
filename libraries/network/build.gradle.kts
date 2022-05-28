@@ -18,3 +18,6 @@ dependencies {
     implementation(Dependencies.daggerHilt)
     kapt(Dependencies.daggerCompiler)
 }
+android {
+    namespace = "com.raudonikis.network"
+}
