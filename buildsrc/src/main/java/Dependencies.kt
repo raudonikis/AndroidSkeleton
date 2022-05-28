@@ -24,6 +24,9 @@ object Versions {
     // Support
     const val appCompat = "1.4.1"
 
+    // UI
+    const val fastAdapter = "5.6.0"
+
     // Kotlin
     const val ktxCore = "1.7.0"
     const val kotlin = "1.6.21"
@@ -76,6 +79,9 @@ object Dependencies {
 
     // Support
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+
+    // UI
+    const val fastAdapter = "com.mikepenz:fastadapter:${Versions.fastAdapter}"
 
     // Kotlin
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"

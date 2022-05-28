@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.raudonikis.data.daos.ExampleDao
 import com.raudonikis.data.entities.ExampleEntity
 
-@Database(entities = [ExampleEntity::class], version = 1)
+@Database(entities = [ExampleEntity::class], version = 1, exportSchema = false)
 abstract class ExampleDatabase : RoomDatabase() {
 
     abstract fun exampleDao(): ExampleDao
