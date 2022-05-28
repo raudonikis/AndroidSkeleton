@@ -5,15 +5,11 @@ plugins {
     kotlin("kapt")
 }
 
-apply {
-    from("../projectDependencyGraph.gradle")
-}
-
 android {
     defaultConfig {
-        applicationId = Releases.applicationId
-        versionCode = Releases.versionCode
-        versionName = Releases.versionName
+        applicationId = AndroidConfig.applicationId
+        versionCode = AndroidConfig.versionCode
+        versionName = AndroidConfig.versionName
     }
 
     buildTypes {
