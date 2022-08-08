@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.2.0")
+        classpath("com.android.tools.build:gradle:7.2.2")
         classpath(Dependencies.kotlinGradlePlugin)
         // Hilt
         classpath(Dependencies.daggerHiltPlugin)
