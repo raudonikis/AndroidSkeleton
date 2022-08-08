@@ -4,7 +4,7 @@ object Versions {
     const val recyclerView = "1.2.1"
 
     // DI
-    const val dagger = "2.42"
+    const val dagger = "2.43.2"
 
     // Logging
     const val timber = "5.0.1"
@@ -12,26 +12,26 @@ object Versions {
     // Networking
     const val retrofit = "2.9.0"
     const val moshi = "1.13.0"
-    const val okHttp = "4.9.0"
+    const val okHttp = "4.10.0"
     const val networkResponseAdapter = "5.0.0"
 
     // Room database
-    const val room = "2.4.2"
+    const val room = "2.4.3"
 
     // Navigation
-    const val navigation = "2.4.2"
+    const val navigation = "2.5.1"
 
     // Support
-    const val appCompat = "1.4.1"
+    const val appCompat = "1.4.2"
 
     // UI
     const val fastAdapter = "5.6.0"
 
     // Kotlin
-    const val ktxCore = "1.7.0"
-    const val kotlin = "1.6.21"
-    const val coroutines = "1.6.1"
-    const val kotlinGradlePlugin = "1.6.21"
+    const val ktxCore = "1.8.0"
+    const val kotlin = "1.7.10"
+    const val coroutines = "1.6.4"
+    const val kotlinGradlePlugin = "1.7.10"
 
     // Testing
     const val jUnit = "4.13.2"
