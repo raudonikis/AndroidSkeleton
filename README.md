@@ -19,7 +19,6 @@ An android template for creating a new project with most set up already done.
 - [Moshi](https://github.com/square/moshi) - A modern JSON library for Android and Java. It makes it easy to parse JSON into Java objects.
 - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
 - [Gradle's Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - Gradle’s Kotlin DSL is an alternative syntax to the Groovy DSL with an enhanced editing experience.
-- [buildSrc](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources) - A special module within the project to manage dependencies.
 
 For more information about used dependencies, see [this](buildsrc/src/main/java/Dependencies.kt) file.
 
@@ -28,7 +27,6 @@ For more information about used dependencies, see [this](buildsrc/src/main/java/
 ![project structure](project_structure.png)
 
 - app - main app module
-- buildSrc - special module for managing dependencies
 - features - package for feature modules
 - libraries - package for other modules (not feature related)
   - common - common logic between all or most modules
