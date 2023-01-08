@@ -4,14 +4,14 @@ object Versions {
     const val recyclerView = "1.2.1"
 
     // DI
-    const val dagger = "2.43.2"
+    const val dagger = "2.44.2"
 
     // Logging
     const val timber = "5.0.1"
 
     // Networking
     const val retrofit = "2.9.0"
-    const val moshi = "1.13.0"
+    const val moshi = "1.14.0"
     const val okHttp = "4.10.0"
     const val networkResponseAdapter = "5.0.0"
 
@@ -19,27 +19,27 @@ object Versions {
     const val room = "2.4.3"
 
     // Navigation
-    const val navigation = "2.5.1"
+    const val navigation = "2.5.3"
 
     // Support
-    const val appCompat = "1.4.2"
+    const val appCompat = "1.5.1"
 
     // UI
     const val fastAdapter = "5.6.0"
 
     // Kotlin
-    const val ktxCore = "1.8.0"
-    const val kotlin = "1.7.10"
+    const val ktxCore = "1.9.0"
+    const val kotlin = "1.7.20"
     const val coroutines = "1.6.4"
-    const val kotlinGradlePlugin = "1.7.10"
+    const val kotlinGradlePlugin = "1.7.20"
 
     // Testing
     const val jUnit = "4.13.2"
-    const val jUnitTest = "1.1.3"
-    const val espresso = "3.4.0"
+    const val jUnitTest = "1.1.5"
+    const val espresso = "3.5.1"
 
     // Quality
-    const val leakCanary = "2.9.1"
+    const val leakCanary = "2.10"
 }
 
 object Dependencies {
