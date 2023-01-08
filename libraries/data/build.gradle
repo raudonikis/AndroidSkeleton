@@ -1,0 +1,22 @@
+plugins {
+    id("com.android.library")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-android")
+    id("kotlin-kapt")
+}
+
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+dependencies {
+    implementation(project(":libraries:common"))
+    // DI
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerCompiler)
+    // Room database
+    api(libs.room)
+    api(libs.roomExtensions)
+    kapt(libs.roomCompiler)
+}
+android {
+    namespace = "com.raudonikis.data"
+}
