@@ -1,0 +1,14 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+}
+
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+dependencies {
+    implementation(project(":libraries:common"))
+    implementation(project(":libraries:navigation"))
+}
+android {
+    namespace = "com.raudonikis.dashboard"
+}

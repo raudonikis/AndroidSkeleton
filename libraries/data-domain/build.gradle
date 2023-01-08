@@ -1,0 +1,20 @@
+plugins {
+    id("com.android.library")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-android")
+    id("kotlin-kapt")
+}
+
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+dependencies {
+    implementation(project(":libraries:common"))
+    implementation(project(":libraries:data"))
+    implementation(project(":libraries:network"))
+    // DI
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerCompiler)
+}
+android {
+    namespace = "com.raudonikis.data_domain"
+}

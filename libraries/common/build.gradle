@@ -1,0 +1,24 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+}
+
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+android {
+    buildFeatures.viewBinding = true
+    namespace = "com.raudonikis.common"
+}
+
+dependencies {
+    // Kotlin
+    api(libs.kotlinStdLib)
+    api(libs.ktxCore)
+    api(libs.kotlinCoroutines)
+    // Support
+    api(libs.appCompat)
+    api(libs.constraintLayout)
+    api(libs.recyclerView)
+    // Logging
+    api(libs.timber)
+}
