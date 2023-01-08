@@ -20,8 +20,6 @@ An android template for creating a new project with most set up already done.
 - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
 - [Gradle's Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - Gradle’s Kotlin DSL is an alternative syntax to the Groovy DSL with an enhanced editing experience.
 
-For more information about used dependencies, see [this](buildsrc/src/main/java/Dependencies.kt) file.
-
 ## Project structure
 
 ![project structure](project_structure.png)
