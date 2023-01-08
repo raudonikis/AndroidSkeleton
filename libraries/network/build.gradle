@@ -1,0 +1,25 @@
+plugins {
+    id("com.android.library")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-android")
+    id("kotlin-kapt")
+}
+
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+dependencies {
+    implementation(project(":libraries:common"))
+    // Networking
+    api(libs.retrofit)
+    implementation(libs.moshi)
+    implementation(libs.moshiConverter)
+    implementation(libs.moshiAdapters)
+    implementation(libs.okHttpInterceptor)
+    api(libs.networkResponseAdapter)
+    // DI
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerCompiler)
+}
+android {
+    namespace = "com.raudonikis.network"
+}
