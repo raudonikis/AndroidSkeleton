@@ -9,11 +9,10 @@ apply from: "$rootProject.projectDir/android-library.gradle"
 dependencies {
     implementation(project(":libraries:common"))
     // Navigation
-    api(libs.navigationFragment)
-    api(libs.navigationUi)
+    api(libs.bundles.navigation)
     // Hilt
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
 }
 android {
     namespace = "com.raudonikis.navigation"

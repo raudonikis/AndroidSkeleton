@@ -18,6 +18,6 @@ dependencies {
     implementation(project(":libraries:navigation"))
     implementation(project(":libraries:data-domain"))
     // Hilt
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
 }

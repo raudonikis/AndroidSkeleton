@@ -4,10 +4,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.3.1")
-        classpath(libs.kotlinGradlePlugin)
-        classpath(libs.daggerHiltPlugin)
-        classpath(libs.navigationSafeArgsPlugin)
+        classpath(libs.android.gradlePlugin)
+        classpath(libs.kotlin.gradlePlugin)
+        classpath(libs.canidropjetifierPlugin)
+        classpath(libs.dagger.gradlePlugin)
+        classpath(libs.navigation.safeArgsGradlePlugin)
     }
 }
 

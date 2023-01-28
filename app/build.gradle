@@ -30,10 +30,8 @@ dependencies {
     implementation(project(":features:home"))
     implementation(project(":features:dashboard"))
     // Hilt
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
-    // Testing
-    androidTestImplementation(libs.espresso)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
     // Quality
     debugImplementation(libs.leakCanary)
 }
