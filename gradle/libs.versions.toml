@@ -1,0 +1,87 @@
+[versions]
+# AndroidX
+androidxCore = "1.9.0"
+appCompat = "1.5.1"
+# DI
+dagger = "2.44.2"
+# Kotlin
+kotlin = "1.8.0"
+kotlinCoroutines = "1.6.4"
+# Networking
+retrofit = "2.9.0"
+moshi = "1.14.0"
+okhttpInterceptor = "4.10.0"
+networkResponseAdapter = "5.0.0"
+# Navigation
+navigation = "2.5.3"
+# Local cache
+room = "2.4.3"
+# Gradle plugins
+androidGradlePlugin = "7.3.1"
+androidBuildTools = "7.3.1"
+versions = "0.38.0"
+canidropjetifier = "0.5"
+# Compose
+compose = "1.4.0"
+activityCompose = "1.5.1"
+# Misc
+timber = "5.0.1"
+# Testing
+testing-junit = "4.13.2"
+testing-androidx-junit = "1.1.3-beta01"
+testing-espresso-core = "3.4.0-beta01"
+# Debugging
+leakCanary = "2.10"
+
+[libraries]
+# DI
+dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
+# Android
+androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+# Kotlin
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinCoroutines" }
+# Logging
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+# Networking
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-moshiConverter = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+moshi = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+okhttp-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttpInterceptor" }
+networkResponseAdapter = { module = "com.github.haroldadmin:NetworkResponseAdapter", version.ref = "networkResponseAdapter" }
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-extensions = { module = "androidx.room:room-ktx", version.ref = "room" }
+# Navigation
+navigation-fragmentKtx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+# Debugging
+leakCanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakCanary" }
+# Gradle plugins
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidBuildTools" }
+dagger-gradlePlugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+versionsPlugin = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "versions" }
+canidropjetifierPlugin = { module = "com.github.plnice:canidropjetifier", version.ref = "canidropjetifier" }
+navigation-safeArgsGradlePlugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
+# Testing
+testing-junit = { module = "junit:junit", version.ref = "testing-junit" }
+testing-androidx-junit = { module = "androidx.test.ext:junit", version.ref = "testing-androidx-junit" }
+testing-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "testing-espresso-core" }
+testing-compose-ui = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+testing-compose-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+
+[bundles]
+room = ["room-extensions", "room-runtime"]
+navigation = ["navigation-fragmentKtx", "navigation-ui"]
+
+[plugins]
+# Android
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+# Kotlin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

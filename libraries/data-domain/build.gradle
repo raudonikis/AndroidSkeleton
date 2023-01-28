@@ -12,8 +12,8 @@ dependencies {
     implementation(project(":libraries:data"))
     implementation(project(":libraries:network"))
     // DI
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
 }
 android {
     namespace = "com.raudonikis.data_domain"

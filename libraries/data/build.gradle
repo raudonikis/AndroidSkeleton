@@ -10,12 +10,11 @@ apply from: "$rootProject.projectDir/android-library.gradle"
 dependencies {
     implementation(project(":libraries:common"))
     // DI
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
-    // Room database
-    api(libs.room)
-    api(libs.roomExtensions)
-    kapt(libs.roomCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
+    // Room
+    api(libs.bundles.room)
+    kapt(libs.room.compiler)
 }
 android {
     namespace = "com.raudonikis.data"
