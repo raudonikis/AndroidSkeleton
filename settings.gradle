@@ -7,5 +7,5 @@ include(":libraries:data")
 include(":libraries:common")
 include(":libraries:network")
 // Features
-include(":features:dashboard")
 include(":features:home")
+include(":features:dashboard")

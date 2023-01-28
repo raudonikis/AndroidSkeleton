@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_home"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.raudonikis.home.HomeFragment"
-        android:label="HomeFragment"
-        tools:layout="@layout/fragment_home">
+        android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_homeNextFragment"
             app:destination="@id/homeNextFragment" />
@@ -17,6 +15,5 @@
     <fragment
         android:id="@+id/homeNextFragment"
         android:name="com.raudonikis.home.HomeNextFragment"
-        android:label="HomeNextFragment"
-        tools:layout="@layout/fragment_home_next" />
+        android:label="HomeNextFragment" />
 </navigation>

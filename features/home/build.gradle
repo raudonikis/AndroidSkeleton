@@ -9,7 +9,12 @@ plugins {
 apply from: "$rootProject.projectDir/android-library.gradle"
 
 android {
-    buildFeatures.viewBinding = true
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+    }
     namespace = "com.raudonikis.home"
 }
 
@@ -20,4 +25,10 @@ dependencies {
     // Hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.compiler)
+    // Compose
+    def composeBom = platform(libs.compose.bom)
+    implementation(composeBom)
+    implementation(libs.bundles.compose)
+    androidTestImplementation(composeBom)
+    debugImplementation(libs.compose.debug.preview)
 }

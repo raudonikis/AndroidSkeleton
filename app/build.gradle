@@ -21,6 +21,12 @@ android {
     lint {
         checkReleaseBuilds = false
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+    }
     namespace = "com.raudonikis.androidskeleton"
 }
 
@@ -32,6 +38,12 @@ dependencies {
     // Hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.compiler)
-    // Quality
+    // Debugging
     debugImplementation(libs.leakCanary)
+    // Compose
+    def composeBom = platform(libs.compose.bom)
+    implementation(composeBom)
+    implementation(libs.bundles.compose)
+    androidTestImplementation(composeBom)
+    debugImplementation(libs.compose.debug.preview)
 }

@@ -6,7 +6,6 @@ plugins {
 apply from: "$rootProject.projectDir/android-library.gradle"
 
 android {
-    buildFeatures.viewBinding = true
     namespace = "com.raudonikis.common"
 }
 

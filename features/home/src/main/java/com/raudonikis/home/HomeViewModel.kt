@@ -13,11 +13,15 @@ class HomeViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    fun navigateToDashboard() {
-        navigationDispatcher.navigate(NavigationGraph.Dashboard)
+    fun dispatchAction(action: HomeAction) {
+        when (action) {
+            HomeAction.NavigateToHomeNext -> navigationDispatcher.navigate(HomeFragmentDirections.actionHomeFragmentToHomeNextFragment())
+            HomeAction.NavigateToDashboard -> navigationDispatcher.navigate(NavigationGraph.Dashboard)
+        }
     }
+}
 
-    fun navigateToHomeNext() {
-        navigationDispatcher.navigate(HomeRouter.homeToHomeNext())
-    }
+sealed class HomeAction {
+    object NavigateToHomeNext : HomeAction()
+    object NavigateToDashboard : HomeAction()
 }
