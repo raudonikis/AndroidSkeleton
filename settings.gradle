@@ -5,6 +5,7 @@ include(":libraries:data-domain")
 include(":libraries:navigation")
 include(":libraries:data")
 include(":libraries:common")
+include(":libraries:common-ui")
 include(":libraries:network")
 // Features
 include(":features:home")

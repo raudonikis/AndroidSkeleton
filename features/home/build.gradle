@@ -6,29 +6,17 @@ plugins {
     id("androidx.navigation.safeargs")
 }
 
-apply from: "$rootProject.projectDir/android-library.gradle"
+apply from: "$rootProject.projectDir/android-library-ui.gradle"
 
 android {
-    buildFeatures {
-        compose true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.get()
-    }
     namespace = "com.raudonikis.home"
 }
 
 dependencies {
-    implementation(project(":libraries:common"))
+    implementation(project(":libraries:common-ui"))
     implementation(project(":libraries:navigation"))
     implementation(project(":libraries:data-domain"))
     // Hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.compiler)
-    // Compose
-    def composeBom = platform(libs.compose.bom)
-    implementation(composeBom)
-    implementation(libs.bundles.compose)
-    androidTestImplementation(composeBom)
-    debugImplementation(libs.compose.debug.preview)
 }
