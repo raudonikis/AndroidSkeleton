@@ -1,5 +1,5 @@
 # AndroidSkeleton
-![Min API](https://img.shields.io/badge/API-23%2B-orange.svg?style=flat)
+![Min API](https://img.shields.io/badge/API-24%2B-orange.svg?style=flat)
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](http://developer.android.com/index.html)
 
 An android template for creating a new project with most set up already done.
