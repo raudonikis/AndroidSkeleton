@@ -77,11 +77,3 @@ testing-compose-manifest = { module = "androidx.compose.ui:ui-test-manifest", ve
 [bundles]
 room = ["room-extensions", "room-runtime"]
 navigation = ["navigation-fragmentKtx", "navigation-ui"]
-
-[plugins]
-# Android
-android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-# Kotlin
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
