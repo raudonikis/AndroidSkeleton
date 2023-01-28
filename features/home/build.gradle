@@ -6,15 +6,14 @@ plugins {
     id("androidx.navigation.safeargs")
 }
 
-apply from: "$rootProject.projectDir/android-library.gradle"
+apply from: "$rootProject.projectDir/android-library-ui.gradle"
 
 android {
-    buildFeatures.viewBinding = true
     namespace = "com.raudonikis.home"
 }
 
 dependencies {
-    implementation(project(":libraries:common"))
+    implementation(project(":libraries:common-ui"))
     implementation(project(":libraries:navigation"))
     implementation(project(":libraries:data-domain"))
     // Hilt

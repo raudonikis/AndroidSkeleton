@@ -1,0 +1,10 @@
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+android {
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+    }
+}

@@ -23,6 +23,7 @@ versions = "0.38.0"
 canidropjetifier = "0.5"
 # Compose
 compose = "1.4.0"
+composeBom = "2023.01.00"
 activityCompose = "1.5.1"
 # Misc
 timber = "5.0.1"
@@ -60,6 +61,17 @@ navigation-fragmentKtx = { module = "androidx.navigation:navigation-fragment-ktx
 navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 # Debugging
 leakCanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakCanary" }
+# Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+# Compose Android Studio Preview support
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-debug-preview = { module = "androidx.compose.ui:ui-tooling" }
+# Compose - optional
+compose-materialIcons = { module = "androidx.compose.material:material-icons-extended" }
+compose-windowSizeUtils = { module = "androidx.compose.material3:material3-window-size-class" }
+compose-activity = { module = "androidx.activity:activity-compose" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose" }
 # Gradle plugins
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidBuildTools" }
 dagger-gradlePlugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
@@ -71,9 +83,10 @@ navigation-safeArgsGradlePlugin = { module = "androidx.navigation:navigation-saf
 testing-junit = { module = "junit:junit", version.ref = "testing-junit" }
 testing-androidx-junit = { module = "androidx.test.ext:junit", version.ref = "testing-androidx-junit" }
 testing-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "testing-espresso-core" }
-testing-compose-ui = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
-testing-compose-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+testing-compose-ui = { module = "androidx.compose.ui:ui-test-junit4" }
+testing-compose-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
 [bundles]
 room = ["room-extensions", "room-runtime"]
 navigation = ["navigation-fragmentKtx", "navigation-ui"]
+compose = ["compose-activity", "compose-material3", "compose-preview"]
