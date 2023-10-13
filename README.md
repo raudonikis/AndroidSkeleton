@@ -14,21 +14,18 @@ An android template for creating a new project with most set up already done.
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - The ViewModel is designed to store and manage UI-related data in a lifecycle conscious way.
   - [Room](https://developer.android.com/topic/libraries/architecture/room) - The Room library provides an abstraction layer over SQLite to allow for more robust database access.
   - [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Hilt is a dependency injection library for Android.
-  - [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - View binding is a feature that allows you to more easily write code that interacts with views.
+  - [Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQjw1aOpBhCOARIsACXYv-c5wbkpE1TCI3KuMlWQarpOOYfkJEYHomaynN_-JGv5DfyK5_HLsiQaArgwEALw_wcB&gclsrc=aw.ds) - Jetpack Compose is Android’s recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
 - [Retrofit](https://github.com/square/retrofit) - A library for building REST API clients.
 - [Moshi](https://github.com/square/moshi) - A modern JSON library for Android and Java. It makes it easy to parse JSON into Java objects.
 - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
 - [Gradle's Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - Gradle’s Kotlin DSL is an alternative syntax to the Groovy DSL with an enhanced editing experience.
-- [buildSrc](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources) - A special module within the project to manage dependencies.
-
-For more information about used dependencies, see [this](buildsrc/src/main/java/Dependencies.kt) file.
+- [Version catalogs](https://developer.android.com/build/migrate-to-catalogs) - Gradle version catalogs enable you to add and maintain dependencies and plugins in a scalable way. Using Gradle version catalogs makes managing dependencies and plugins easier when you have multiple modules.
 
 ## Project structure
 
 ![project structure](project_structure.png)
 
 - app - main app module
-- buildSrc - special module for managing dependencies
 - features - package for feature modules
 - libraries - package for other modules (not feature related)
   - common - common logic between all or most modules
