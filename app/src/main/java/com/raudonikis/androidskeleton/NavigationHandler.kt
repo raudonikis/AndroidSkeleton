@@ -1,40 +1,43 @@
 package com.raudonikis.androidskeleton
 
 import androidx.navigation.NavController
-import com.raudonikis.navigation.NavigationCommand
-import com.raudonikis.navigation.NavigationDispatcher
-import com.raudonikis.navigation.NavigationGraph
+import com.raudonikis.navigation.model.NavigationEvent
+import com.raudonikis.navigation.model.NavigationGraph
+import com.raudonikis.navigation.NavigatorHost
 import dagger.hilt.android.scopes.ActivityRetainedScoped
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.onEach
 import timber.log.Timber
 import javax.inject.Inject
 
 @ActivityRetainedScoped
-class NavigationHandler @Inject constructor(private val navigationDispatcher: NavigationDispatcher) {
+class NavigationHandler @Inject constructor(
+    private val navigatorHost: NavigatorHost,
+) {
 
     suspend fun setUpNavigation(navController: NavController) {
-        navigationDispatcher.getNavigationCommands()
-            .onEach { navigationCommand ->
-                Timber.d("NavigationCommand -> $navigationCommand")
-                when (navigationCommand) {
-                    is NavigationCommand.ToGraph -> {
-                        onGraphNavigation(navController, navigationCommand.graph)
-                    }
-                    is NavigationCommand.To -> {
-                        navController.navigate(navigationCommand.directions)
-                    }
-                    is NavigationCommand.Back -> {
-                        navController.popBackStack()
-                    }
-                    is NavigationCommand.BackTo -> {
-                        navController.popBackStack(navigationCommand.destinationId, true)
-                    }
-                    is NavigationCommand.ToRoot -> {
-                        // TODO
-                    }
+        navigatorHost.navigationEvents.collect { navigationCommand ->
+            Timber.d("NavigationCommand -> $navigationCommand")
+            when (navigationCommand) {
+                is NavigationEvent.ToGraph -> {
+                    onGraphNavigation(navController, navigationCommand.graph)
                 }
-            }.collect()
+
+                is NavigationEvent.To -> {
+                    navController.navigate(navigationCommand.directions)
+                }
+
+                is NavigationEvent.Back -> {
+                    navController.popBackStack()
+                }
+
+                is NavigationEvent.BackTo -> {
+                    navController.popBackStack(navigationCommand.destinationId, true)
+                }
+
+                is NavigationEvent.ToRoot -> {
+                    // TODO
+                }
+            }
+        }
     }
 
     private fun onGraphNavigation(navController: NavController, graph: NavigationGraph) {

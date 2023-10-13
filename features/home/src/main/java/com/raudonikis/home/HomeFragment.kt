@@ -1,38 +1,45 @@
 package com.raudonikis.home
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.fragment.app.viewModels
-import com.raudonikis.home.databinding.FragmentHomeBinding
+import com.raudonikis.common_ui.ComposeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : ComposeFragment() {
 
-    private var binding: FragmentHomeBinding? = null
+    private val homeViewModel by viewModels<HomeViewModel>()
 
-    private val viewModel: HomeViewModel by viewModels()
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding = FragmentHomeBinding.bind(view)
-        setUpListeners()
+    @Composable
+    override fun Content() {
+        HomeScreen(onAction = homeViewModel::dispatchAction)
     }
+}
 
-    private fun setUpListeners() {
-        binding?.apply {
-            buttonToDashboard.setOnClickListener {
-                viewModel.navigateToDashboard()
-            }
-            buttonToHomeNext.setOnClickListener {
-                viewModel.navigateToHomeNext()
-            }
+@Composable
+private fun HomeScreen(onAction: (HomeAction) -> Unit) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("Home screen")
+        Button(onClick = { onAction(HomeAction.NavigateToHomeNext) }) {
+            Text("To home next")
+        }
+        Button(onClick = { onAction(HomeAction.NavigateToDashboard) }) {
+            Text("To dashboard")
         }
     }
+}
 
-    override fun onDestroy() {
-        binding = null
-        super.onDestroy()
-    }
+@Preview
+@Composable
+private fun Preview() {
+    HomeScreen(onAction = {})
 }

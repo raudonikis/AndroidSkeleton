@@ -1,5 +1,31 @@
 package com.raudonikis.home
 
-import androidx.fragment.app.Fragment
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.Preview
+import com.raudonikis.common_ui.ComposeFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class HomeNextFragment : Fragment(R.layout.fragment_home_next)
+@AndroidEntryPoint
+class HomeNextFragment : ComposeFragment() {
+
+    @Composable
+    override fun Content() {
+        HomeNextScreen()
+    }
+}
+
+@Composable
+private fun HomeNextScreen() {
+    Box(contentAlignment = Alignment.Center) {
+        Text("Home next screen")
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+private fun Preview() {
+    HomeNextScreen()
+}

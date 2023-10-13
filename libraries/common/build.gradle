@@ -6,19 +6,15 @@ plugins {
 apply from: "$rootProject.projectDir/android-library.gradle"
 
 android {
-    buildFeatures.viewBinding = true
     namespace = "com.raudonikis.common"
 }
 
 dependencies {
     // Kotlin
-    api(libs.kotlinStdLib)
-    api(libs.ktxCore)
-    api(libs.kotlinCoroutines)
+    api(libs.kotlin.coroutines)
     // Support
-    api(libs.appCompat)
-    api(libs.constraintLayout)
-    api(libs.recyclerView)
+    api(libs.androidx.appcompat)
+    api(libs.androidx.coreKtx)
     // Logging
     api(libs.timber)
 }

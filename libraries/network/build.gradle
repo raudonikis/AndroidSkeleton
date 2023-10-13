@@ -12,13 +12,13 @@ dependencies {
     // Networking
     api(libs.retrofit)
     implementation(libs.moshi)
-    implementation(libs.moshiConverter)
-    implementation(libs.moshiAdapters)
-    implementation(libs.okHttpInterceptor)
+    implementation(libs.retrofit.moshiConverter)
+    implementation(libs.moshi.adapters)
+    implementation(libs.okhttp.interceptor)
     api(libs.networkResponseAdapter)
     // DI
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
 }
 android {
     namespace = "com.raudonikis.network"

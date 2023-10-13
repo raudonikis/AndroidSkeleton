@@ -5,7 +5,7 @@ plugins {
     id("kotlin-kapt")
 }
 
-apply from: "$rootProject.projectDir/android-library.gradle"
+apply from: "$rootProject.projectDir/android-library-ui.gradle"
 
 android {
     buildTypes {
@@ -25,15 +25,13 @@ android {
 }
 
 dependencies {
-    implementation(project(":libraries:common"))
+    implementation(project(":libraries:common-ui"))
     implementation(project(":libraries:navigation"))
     implementation(project(":features:home"))
     implementation(project(":features:dashboard"))
     // Hilt
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerCompiler)
-    // Testing
-    androidTestImplementation(libs.espresso)
-    // Quality
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.compiler)
+    // Debugging
     debugImplementation(libs.leakCanary)
 }
