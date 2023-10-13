@@ -18,7 +18,6 @@ An android template for creating a new project with most set up already done.
 - [Retrofit](https://github.com/square/retrofit) - A library for building REST API clients.
 - [Moshi](https://github.com/square/moshi) - A modern JSON library for Android and Java. It makes it easy to parse JSON into Java objects.
 - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
-- [Gradle's Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - Gradle’s Kotlin DSL is an alternative syntax to the Groovy DSL with an enhanced editing experience.
 - [Version catalogs](https://developer.android.com/build/migrate-to-catalogs) - Gradle version catalogs enable you to add and maintain dependencies and plugins in a scalable way. Using Gradle version catalogs makes managing dependencies and plugins easier when you have multiple modules.
 
 ## Project structure
@@ -29,6 +28,7 @@ An android template for creating a new project with most set up already done.
 - features - package for feature modules
 - libraries - package for other modules (not feature related)
   - common - common logic between all or most modules
+  - common-ui - common UI logic
   - data - database, entities
   - data-domain - domain models, mappers
   - navigation - navigation handling logic
